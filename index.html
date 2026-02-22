@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Story Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <h1>📖 Story Portal</h1>
+        <button onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="form-container">
+        <input type="hidden" id="editId">
+        <input type="text" id="title" placeholder="Story Title">
+        <textarea id="content" placeholder="Write your story..."></textarea>
+        
+        <select id="category">
+            <option value="Motivation">Motivation</option>
+            <option value="Love">Love</option>
+            <option value="Tech">Tech</option>
+        </select>
+
+        <button onclick="addOrUpdateStory()">Save Story</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search story..." 
+           onkeyup="searchStories(this.value)">
+
+    <div id="storyList"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
